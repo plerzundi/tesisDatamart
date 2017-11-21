@@ -1,0 +1,965 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/6/2017 5:58:45 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SERVERAGRI"
+  DTS:CreatorName="SERVERAGRI\Administrador"
+  DTS:DTSID="{224CF768-BAF8-4787-B019-B00C1F54A848}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.1000.169"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="CargaModeloPredict"
+  DTS:PackageType="5"
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{B70D045D-BC44-4D8E-B60C-E398CFE4BDBD}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Traspaso FT_Castigo"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{BFEAC92A-3856-4D0F-947B-A36AE364B458}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Traspaso FT_Castigo"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Traspaso FT_Castigo\Conversión de datos"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversión de datos;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Conversión de datos"
+              name="Conversión de datos"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Traspaso FT_Castigo\Conversión de datos.Inputs[Entrada de conversión de datos]"
+                  name="Entrada de conversión de datos">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Traspaso FT_Castigo\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[proveedorID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="proveedorID"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[proveedorID]" />
+                    <inputColumn
+                      refId="Package\Traspaso FT_Castigo\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[plantaID]"
+                      cachedDataType="i4"
+                      cachedName="plantaID"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[plantaID]" />
+                    <inputColumn
+                      refId="Package\Traspaso FT_Castigo\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[temporadaID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="temporadaID"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[temporadaID]" />
+                    <inputColumn
+                      refId="Package\Traspaso FT_Castigo\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[productoID]"
+                      cachedDataType="i4"
+                      cachedName="productoID"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[productoID]" />
+                    <inputColumn
+                      refId="Package\Traspaso FT_Castigo\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[tiempoID]"
+                      cachedDataType="i4"
+                      cachedName="tiempoID"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[tiempoID]" />
+                    <inputColumn
+                      refId="Package\Traspaso FT_Castigo\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[kilos_comprado]"
+                      cachedDataType="r8"
+                      cachedName="kilos_comprado"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[kilos_comprado]" />
+                    <inputColumn
+                      refId="Package\Traspaso FT_Castigo\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[porcentaje_castigo]"
+                      cachedDataType="r8"
+                      cachedName="porcentaje_castigo"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[porcentaje_castigo]" />
+                    <inputColumn
+                      refId="Package\Traspaso FT_Castigo\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[precio_ofrecido]"
+                      cachedDataType="i4"
+                      cachedName="precio_ofrecido"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[precio_ofrecido]" />
+                    <inputColumn
+                      refId="Package\Traspaso FT_Castigo\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[estado]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="estado"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[estado]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos]"
+                  exclusionGroup="1"
+                  name="Salida de conversión de datos"
+                  synchronousInputId="Package\Traspaso FT_Castigo\Conversión de datos.Inputs[Entrada de conversión de datos]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de proveedorID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de proveedorID]"
+                      name="Copia de proveedorID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[proveedorID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de plantaID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de plantaID]"
+                      name="Copia de plantaID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[plantaID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de temporadaID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="15"
+                      lineageId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de temporadaID]"
+                      name="Copia de temporadaID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[temporadaID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de productoID]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de productoID]"
+                      name="Copia de productoID"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[productoID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de tiempoID]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de tiempoID]"
+                      name="Copia de tiempoID"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[tiempoID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de kilos_comprado]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de kilos_comprado]"
+                      name="Copia de kilos_comprado"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[kilos_comprado]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de porcentaje_castigo]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de porcentaje_castigo]"
+                      name="Copia de porcentaje_castigo"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[porcentaje_castigo]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de precio_ofrecido]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de precio_ofrecido]"
+                      name="Copia de precio_ofrecido"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[precio_ofrecido]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de estado]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="6"
+                      lineageId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de estado]"
+                      name="Copia de estado"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[estado]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de error de conversión de datos]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de conversión de datos"
+                  synchronousInputId="Package\Traspaso FT_Castigo\Conversión de datos.Inputs[Entrada de conversión de datos]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Traspaso FT_Castigo\Destino de OLE DB"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="Destino de OLE DB"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[FT_Castigo]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Traspaso FT_Castigo\Destino de OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="{EA511B04-6922-4D25-B7EB-6FEA50D5B2D8}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[SERVERAGRI.AgrisolDM]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Copia de tiempoID]"
+                      cachedDataType="numeric"
+                      cachedName="Copia de tiempoID"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[tiempoID]"
+                      lineageId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de tiempoID]" />
+                    <inputColumn
+                      refId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Copia de proveedorID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Copia de proveedorID"
+                      externalMetadataColumnId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[proveedorID]"
+                      lineageId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de proveedorID]" />
+                    <inputColumn
+                      refId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Copia de plantaID]"
+                      cachedDataType="i4"
+                      cachedName="Copia de plantaID"
+                      externalMetadataColumnId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[plantaID]"
+                      lineageId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de plantaID]" />
+                    <inputColumn
+                      refId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Copia de temporadaID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="Copia de temporadaID"
+                      externalMetadataColumnId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[temporadaID]"
+                      lineageId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de temporadaID]" />
+                    <inputColumn
+                      refId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Copia de productoID]"
+                      cachedDataType="numeric"
+                      cachedName="Copia de productoID"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[productoID]"
+                      lineageId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de productoID]" />
+                    <inputColumn
+                      refId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Copia de estado]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="Copia de estado"
+                      externalMetadataColumnId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[estado]"
+                      lineageId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de estado]" />
+                    <inputColumn
+                      refId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Copia de kilos_comprado]"
+                      cachedDataType="numeric"
+                      cachedName="Copia de kilos_comprado"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[kilos_comprado]"
+                      lineageId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de kilos_comprado]" />
+                    <inputColumn
+                      refId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Copia de porcentaje_castigo]"
+                      cachedDataType="r8"
+                      cachedName="Copia de porcentaje_castigo"
+                      externalMetadataColumnId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[porcentaje_castigo]"
+                      lineageId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de porcentaje_castigo]" />
+                    <inputColumn
+                      refId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Copia de precio_ofrecido]"
+                      cachedDataType="numeric"
+                      cachedName="Copia de precio_ofrecido"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[precio_ofrecido]"
+                      lineageId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de precio_ofrecido]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[tiempoID]"
+                      dataType="i4"
+                      name="tiempoID" />
+                    <externalMetadataColumn
+                      refId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[proveedorID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="proveedorID" />
+                    <externalMetadataColumn
+                      refId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[plantaID]"
+                      dataType="i4"
+                      name="plantaID" />
+                    <externalMetadataColumn
+                      refId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[temporadaID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="temporadaID" />
+                    <externalMetadataColumn
+                      refId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[productoID]"
+                      dataType="i4"
+                      name="productoID" />
+                    <externalMetadataColumn
+                      refId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[estado]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="estado" />
+                    <externalMetadataColumn
+                      refId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[kilos_comprado]"
+                      dataType="i4"
+                      name="kilos_comprado" />
+                    <externalMetadataColumn
+                      refId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[porcentaje_castigo]"
+                      dataType="r8"
+                      name="porcentaje_castigo" />
+                    <externalMetadataColumn
+                      refId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[precio_ofrecido]"
+                      dataType="i4"
+                      name="precio_ofrecido" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Traspaso FT_Castigo\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Traspaso FT_Castigo\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Traspaso FT_Castigo\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Traspaso FT_Castigo\Origen de OLE DB"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="Origen de OLE DB"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT       proD.proveedorID,plaD.plantaID, tempD.temporadaID,cliD.productoID,tiD.tiempoID,detTR.kilos_comprado,detTR.porcentaje_castigo,detTR.precio_ofrecido,CASE  WHEN detTR.porcentaje_castigo &gt;= 8 THEN 'MALO' WHEN detTR.porcentaje_castigo &lt;=7 AND detTR.porcentaje_castigo &gt;= 4 THEN 'NORMAL'WHEN detTR.porcentaje_castigo &lt;= 3 THEN 'BUENO'  END AS estado
+																																																																																																																																																																																																													
+FROM            AgrisolTR.dbo.Detalle_Compra detTR INNER JOIN
+                         AgrisolTR.dbo.Compra ON detTR.detalleID = AgrisolTR.dbo.Compra.compraID INNER JOIN
+                         AgrisolTR.dbo.Producto ON detTR.productoID = AgrisolTR.dbo.Producto.productoID INNER JOIN
+                         AgrisolTR.dbo.Categoria ON AgrisolTR.dbo.Producto.categoriaID = AgrisolTR.dbo.Categoria.categoriaID INNER JOIN
+                         AgrisolTR.dbo.Proveedor ON AgrisolTR.dbo.Compra.proveedorID = AgrisolTR.dbo.Proveedor.proveedorID INNER JOIN
+                         AgrisolTR.dbo.Planta ON AgrisolTR.dbo.Proveedor.plantaID = AgrisolTR.dbo.Planta.plantaID INNER JOIN
+                         AgrisolTR.dbo.Comuna ON AgrisolTR.dbo.Proveedor.comunaID = AgrisolTR.dbo.Comuna.comunaID INNER JOIN
+                         AgrisolTR.dbo.Provincia ON AgrisolTR.dbo.Comuna.provinciaID = AgrisolTR.dbo.Provincia.provinciaID INNER JOIN
+                         AgrisolTR.dbo.Region ON AgrisolTR.dbo.Provincia.regionID = AgrisolTR.dbo.Region.regionID INNER JOIN
+                         AgrisolTR.dbo.Temporada ON AgrisolTR.dbo.Compra.temporadaID = AgrisolTR.dbo.Temporada.temporadaID AND AgrisolTR.dbo.Planta.plantaID = AgrisolTR.dbo.Temporada.plantaID INNER JOIN
+                         AgrisolTR.dbo.Tipo_Pago ON AgrisolTR.dbo.Compra.tipopagoID = AgrisolTR.dbo.Tipo_Pago.tipopagoID INNER JOIN
+						 AgrisolDM.dbo.DT_Proveedor proD ON AgrisolTR.dbo.Proveedor.proveedorID = proD.proveedorID INNER JOIN
+						 AgrisolDM.dbo.DT_Planta plaD  ON AgrisolTR.dbo.Planta.nombre_planta = plaD.nombre_planta INNER JOIN
+						 AgrisolDM.dbo.DT_Temporada tempD ON AgrisolTR.dbo.Temporada.nombre_temporada = tempD.nombre_temporada INNER JOIN
+						 AgrisolDM.dbo.DT_Producto cliD ON AgrisolTR.dbo.Producto.nombre_producto = cliD.nombre_producto INNER JOIN
+						 AgrisolDM.dbo.DT_Tiempo  tiD ON  tiD.fecha = CONVERT(DATE,AgrisolTR.dbo.Compra.fecha_compra)</property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="{EA511B04-6922-4D25-B7EB-6FEA50D5B2D8}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[SERVERAGRI.AgrisolDM]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[proveedorID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[proveedorID]"
+                      length="20"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[proveedorID]"
+                      name="proveedorID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[plantaID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[plantaID]"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[plantaID]"
+                      name="plantaID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[temporadaID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[temporadaID]"
+                      length="15"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[temporadaID]"
+                      name="temporadaID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[productoID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[productoID]"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[productoID]"
+                      name="productoID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[tiempoID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[tiempoID]"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[tiempoID]"
+                      name="tiempoID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[kilos_comprado]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[kilos_comprado]"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[kilos_comprado]"
+                      name="kilos_comprado"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[porcentaje_castigo]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[porcentaje_castigo]"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[porcentaje_castigo]"
+                      name="porcentaje_castigo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[precio_ofrecido]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[precio_ofrecido]"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[precio_ofrecido]"
+                      name="precio_ofrecido"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[estado]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[estado]"
+                      length="6"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[estado]"
+                      name="estado"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[proveedorID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="proveedorID" />
+                    <externalMetadataColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[plantaID]"
+                      dataType="i4"
+                      name="plantaID" />
+                    <externalMetadataColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[temporadaID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="temporadaID" />
+                    <externalMetadataColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[productoID]"
+                      dataType="i4"
+                      name="productoID" />
+                    <externalMetadataColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[tiempoID]"
+                      dataType="i4"
+                      name="tiempoID" />
+                    <externalMetadataColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[kilos_comprado]"
+                      dataType="r8"
+                      name="kilos_comprado" />
+                    <externalMetadataColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[porcentaje_castigo]"
+                      dataType="r8"
+                      name="porcentaje_castigo" />
+                    <externalMetadataColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[precio_ofrecido]"
+                      dataType="i4"
+                      name="precio_ofrecido" />
+                    <externalMetadataColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[estado]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      name="estado" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[proveedorID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[proveedorID]"
+                      name="proveedorID" />
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[plantaID]"
+                      dataType="i4"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[plantaID]"
+                      name="plantaID" />
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[temporadaID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[temporadaID]"
+                      name="temporadaID" />
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[productoID]"
+                      dataType="i4"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[productoID]"
+                      name="productoID" />
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[tiempoID]"
+                      dataType="i4"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[tiempoID]"
+                      name="tiempoID" />
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[kilos_comprado]"
+                      dataType="r8"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[kilos_comprado]"
+                      name="kilos_comprado" />
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[porcentaje_castigo]"
+                      dataType="r8"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[porcentaje_castigo]"
+                      name="porcentaje_castigo" />
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[precio_ofrecido]"
+                      dataType="i4"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[precio_ofrecido]"
+                      name="precio_ofrecido" />
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[estado]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[estado]"
+                      name="estado" />
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Traspaso FT_Castigo.Paths[Salida de conversión de datos]"
+              endId="Package\Traspaso FT_Castigo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de conversión de datos"
+              startId="Package\Traspaso FT_Castigo\Conversión de datos.Outputs[Salida de conversión de datos]" />
+            <path
+              refId="Package\Traspaso FT_Castigo.Paths[Salida de origen de OLE DB]"
+              endId="Package\Traspaso FT_Castigo\Conversión de datos.Inputs[Entrada de conversión de datos]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Traspaso FT_Castigo\Origen de OLE DB.Outputs[Salida de origen de OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Traspaso FT_Castigo"
+          TopLeft="315,109" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Traspaso FT_Castigo">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Traspaso FT_Castigo\Origen de OLE DB"
+          TopLeft="202,58" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Traspaso FT_Castigo\Conversión de datos"
+          TopLeft="310,202" />
+        <EdgeLayout
+          Id="Package\Traspaso FT_Castigo.Paths[Salida de origen de OLE DB]"
+          TopLeft="284,100">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="113.5,102"
+              Start="0,0"
+              End="113.5,94.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,47"
+                    Point2="0,51"
+                    Point3="4,51" />
+                  <mssgle:LineSegment
+                    End="109.5,51" />
+                  <mssgle:CubicBezierSegment
+                    Point1="109.5,51"
+                    Point2="113.5,51"
+                    Point3="113.5,55" />
+                  <mssgle:LineSegment
+                    End="113.5,94.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Traspaso FT_Castigo\Destino de OLE DB"
+          TopLeft="457,313" />
+        <EdgeLayout
+          Id="Package\Traspaso FT_Castigo.Paths[Salida de conversión de datos]"
+          TopLeft="397.5,244">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="143.5,69"
+              Start="0,0"
+              End="143.5,61.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.5"
+                    Point2="0,34.5"
+                    Point3="4,34.5" />
+                  <mssgle:LineSegment
+                    End="139.5,34.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="139.5,34.5"
+                    Point2="143.5,34.5"
+                    Point3="143.5,38.5" />
+                  <mssgle:LineSegment
+                    End="143.5,61.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Traspaso FT_Castigo\Origen de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Traspaso FT_Castigo\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

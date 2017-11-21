@@ -1,0 +1,117 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>CuboAgrisol</Database>
+    <Server>localhost</Server>
+    <ConnectionString>Data Source=localhost;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>88zpqbXs4tZB3fW6y0Hz0dV7Qrw=30/10/2017 23:03:4530/10/2017 23:03:45</TimeStamp>
+        <ID>
+          <String>Agrisol DM</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>mBtPMl8tfNzKXigJLclQFNYpzOI=09/11/2017 0:26:4830/10/2017 23:03:59</TimeStamp>
+        <ID>
+          <String>Agrisol DM</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>i0pVbZVlhKtu7xPFjLoCOULqnhI=07/11/2017 11:12:3030/10/2017 23:04:19</TimeStamp>
+        <ID>
+          <String>DT Comuna</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>xJGdgPSWy8SGYzFCIp+dBApKxEY=07/11/2017 11:08:2130/10/2017 23:06:44</TimeStamp>
+        <ID>
+          <String>DT Planta</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>KHbCiyF1iwuKn6UgA6g1Q9/w18w=07/11/2017 11:08:2130/10/2017 23:07:00</TimeStamp>
+        <ID>
+          <String>DT Region</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>oZXyJ6QRc0w/+6lT2JyuEGUfZWI=07/11/2017 11:08:2130/10/2017 23:07:15</TimeStamp>
+        <ID>
+          <String>DT Provincia</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>eSdiIFkvuTOnhPIJvnOyyPoKfzU=07/11/2017 11:08:2130/10/2017 23:07:26</TimeStamp>
+        <ID>
+          <String>DT Producto</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>DYpaEydq7TS+afXkmMOn299Dc8o=07/11/2017 11:08:2130/10/2017 23:07:43</TimeStamp>
+        <ID>
+          <String>DT Temporada</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>2o96e0D7Z6EN/EBi2nq26fQ/BrQ=07/11/2017 11:02:5030/10/2017 23:07:57</TimeStamp>
+        <ID>
+          <String>DT Proveedor</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>SB/N4oFBvjytl4TziLDq68A2+uw=08/11/2017 22:26:5730/10/2017 23:08:12</TimeStamp>
+        <ID>
+          <String>DT Tiempo</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>MU6LrIaIo98KaJ8LwNVnO8WAkkg=12/11/2017 1:35:1930/10/2017 23:09:08wYxznyzXwHs2dSnPgeutc9/Jw/Q=09/11/2017 0:07:2130/10/2017 23:09:08</TimeStamp>
+        <ID>
+          <String>Agrisol DM</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.MiningStructure</Type>
+        <TimeStamp>zPABzwGeHmHvOMcoJjySC21kkZ4=09/11/2017 2:36:3809/11/2017 2:19:03</TimeStamp>
+        <ID>
+          <String>DM_Castigo</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>a/OlLMTuOewRLjrOR6fZTq3uaDA=30/10/2017 23:03:1430/10/2017 23:03:14</TimeStamp>
+      <ID>
+        <String>CuboAgrisol</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2017-11-15T03:20:56.003333Z</LastDeployed>
+</DeploymentSnapshot>
